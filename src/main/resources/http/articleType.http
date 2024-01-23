@@ -1,0 +1,36 @@
+### create article type
+POST http://localhost:8081/articleType
+Content-Type: application/json
+
+{
+  "nameUz":"jamiyat",
+  "nameEn": "society",
+  "nameRu": "общество",
+  "orderNumber": 3
+}
+
+### get by id
+GET http://localhost:8081/articleType/1
+
+### update by id
+PUT http://localhost:8081/articleType/1
+Content-Type: application/json
+
+{
+  "nameUz":"siyosat",
+  "nameEn": "politics",
+  "nameRu": "политика",
+  "orderNumber": 2
+}
+
+### delete by id
+DELETE http://localhost:8081/articleType/1
+
+### pagination
+POST http://localhost:8081/articleType/
+
+### pagination
+GET http://localhost:8081/articleType/pagination?page=1&size=1
+
+### get by lang
+GET http://localhost:8081/articleType/byLang?id=1&keyLang=en
